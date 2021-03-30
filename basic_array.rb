@@ -27,13 +27,23 @@
 # p doubled
 
 # array max
-numbers = [5, 17, -4, 20, 12]
-max = numbers[0]
+# numbers = [5, 17, -4, 20, 12]
+# max = numbers[0]
+# index = 1
+# while index < numbers.length
+#   if numbers[index] > max
+#     max = numbers[index]
+#   end
+#   index +=1
+# end
+# p max
+
+# reduce: product
+numbers = [1, 2, 3, 4]
+product = numbers[0]
 index = 1
 while index < numbers.length
-  if numbers[index] > max
-    max = numbers[index]
-  end
-  index +=1
+ product = product * numbers[index]
+  index += 1
 end
-p max
+p product
