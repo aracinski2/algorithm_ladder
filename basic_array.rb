@@ -49,11 +49,21 @@
 # p product
 
 # reverse array
-numbers = [1, 2, 3, 4, 5]
-index = numbers.length - 1
-reverse = []
-while index >= 0
-  reverse << numbers[index]
-  index -= 1
+# numbers = [1, 2, 3, 4, 5]
+# index = numbers.length - 1
+# reverse = []
+# while index >= 0
+#   reverse << numbers[index]
+#   index -= 1
+# end
+# p reverse
+
+# skip it
+numbers = [2, 1, 3, 2, 5, 1, 2, 6, 2, 7, 1, 5, 6, 3, 2, 6, 2, 1, 2]
+cool_numbers = []
+index = 0
+while index < numbers.length
+  cool_numbers << numbers[index]
+  index += numbers[index]
 end
-p reverse
+p cool_numbers
