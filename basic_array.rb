@@ -39,11 +39,21 @@
 # p max
 
 # reduce: product
-numbers = [1, 2, 3, 4]
-product = numbers[0]
-index = 1
-while index < numbers.length
- product = product * numbers[index]
-  index += 1
+# numbers = [1, 2, 3, 4]
+# product = numbers[0]
+# index = 1
+# while index < numbers.length
+#  product = product * numbers[index]
+#   index += 1
+# end
+# p product
+
+# reverse array
+numbers = [1, 2, 3, 4, 5]
+index = numbers.length - 1
+reverse = []
+while index >= 0
+  reverse << numbers[index]
+  index -= 1
 end
-p product
+p reverse
