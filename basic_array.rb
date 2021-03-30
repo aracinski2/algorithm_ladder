@@ -19,9 +19,21 @@
 # p low_numbers
 
 # map: double
-numbers = [4, 2, 5, 99, -4]
-doubled = []
-numbers.each do |number|
-  doubled << number * 2
+# numbers = [4, 2, 5, 99, -4]
+# doubled = []
+# numbers.each do |number|
+#   doubled << number * 2
+# end
+# p doubled
+
+# array max
+numbers = [5, 17, -4, 20, 12]
+max = numbers[0]
+index = 1
+while index < numbers.length
+  if numbers[index] > max
+    max = numbers[index]
+  end
+  index +=1
 end
-p doubled
+p max
