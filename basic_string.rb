@@ -46,20 +46,53 @@
 # p alternate("hello, how are your porcupines today?")
 
 # first duplicate character
+# def duplicate(string)
+#   index = 0
+#   while index < string.length
+#     letter = string[index]
+#     index2 = index + 1
+#     while index2 < string.length
+#       if letter == string[index2]
+#         return letter
+#       end
+#       index2 += 1
+#     end
+#     index += 1
+#   end
+# end
 
-def duplicate(string)
+# p duplicate("abcdefghhijkkloooop")
+
+# reverse words
+def reverse_words(string)
   index = 0
+  word = ""
+  array = []
+  reverse_string = ""
   while index < string.length
-    letter = string[index]
-    index2 = index + 1
-    while index2 < string.length
-      if letter == string[index2]
-        return letter
-      end
-      index2 += 1
+    if string[index] == " "
+      array << word
+      word = ""
+      index += 1
+    end
+    word += string[index]
+    if index == string.length - 1
+      array << word
     end
     index += 1
   end
+  p word
+  p array
+  index2 = array.length - 1
+  while index2 >= 0
+    if index2 == 0
+      reverse_string += array[index2]
+    else
+      reverse_string += array[index2] + " "
+    end
+    index2 -= 1
+  end
+  return reverse_string
 end
 
-p duplicate("abcdefghhijkkloooop")
+p reverse_words("popcorn is so cool isn’t it yeah i thought so")
