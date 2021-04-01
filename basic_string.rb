@@ -97,25 +97,41 @@
 
 # p reverse_words("popcorn is so cool isn’t it yeah i thought so")
 
-def palindrome(string)
-  array = []
+# def palindrome(string)
+#   array = []
+#   index = 0
+#   while index < string.length
+#     array << string[index]
+#     index += 1
+#   end
+#   reverse_string = ""
+#   index2 = array.length - 1
+#   while index2 >= 0
+#     reverse_string += array[index2]
+#     index2 -= 1
+#   end
+#   if string == reverse_string
+#     return true
+#   else
+#     return false
+#   end
+# end
+
+# p palindrome("racecar")
+# p palindrome("baloney")
+
+# hamming
+def differences(string1, string2)
   index = 0
-  while index < string.length
-    array << string[index]
+  differnce_number = 0
+  while index < string1.length
+    if string1[index] != string2[index]
+      differnce_number += 1
+    end
     index += 1
   end
-  reverse_string = ""
-  index2 = array.length - 1
-  while index2 >= 0
-    reverse_string += array[index2]
-    index2 -= 1
-  end
-  if string == reverse_string
-    return true
-  else
-    return false
-  end
+  return differnce_number
 end
 
-p palindrome("racecar")
-p palindrome("baloney")
+p differences("ABCDEFG", "ABCXEOG")
+p differences("ABCDEFG", "ABCDEFG")
