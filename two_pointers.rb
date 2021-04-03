@@ -32,20 +32,45 @@
 # p combo_array
 
 # largest product
-def largest_product(array)
+# def largest_product(array)
+#   index = 0
+#   largest = array[index]
+#   while index < array.length
+#     index2 = index + 1
+#     while index2 < array.length
+#       product = array[index] * array[index2]
+#       if product > largest
+#         largest = product
+#       end
+#       index2 += 1
+#     end
+#     index += 1
+#   end
+#   return largest
+# end
+# p largest_product([5, -2, 1, -9, -7, 2, 6])
+
+# two sum I
+def sum_of_ten(array)
   index = 0
-  largest = array[index]
+  sum = 0
   while index < array.length
     index2 = index + 1
     while index2 < array.length
-      product = array[index] * array[index2]
-      if product > largest
-        largest = product
+      sum = array[index] + array[index2]
+      if sum == 10
+        return [array[index], array[index2]]
+        break
       end
+
       index2 += 1
     end
     index += 1
   end
-  return largest
+  if index == array.length
+    return false
+  end
 end
-p largest_product([5, -2, 1, -9, -7, 2, 6])
+
+p sum_of_ten([2, 5, 3, 1, 0, 7, 11])
+p sum_of_ten([1, 2, 3, 4, 5])
