@@ -76,23 +76,43 @@
 # p sum_of_ten([1, 2, 3, 4, 5])
 
 # merge sorted arrays
-array = [1, 5, 8]
-array2 = [6, 9]
-index = 0
-index2 = 0
-while index < array.length
-  while index2 < array2.length
-    if array2[index2] < array[index]
-      array.insert(index, array2[index2])
-      index2 += 1
-    elsif index == array.length - 1
-      array.insert(index + 1, array2[index2])
-      index2 += 1
-    else
-      index += 1
+# array = [1, 5, 8]
+# array2 = [6, 9]
+# index = 0
+# index2 = 0
+# while index < array.length
+#   while index2 < array2.length
+#     if array2[index2] < array[index]
+#       array.insert(index, array2[index2])
+#       index2 += 1
+#     elsif index == array.length - 1
+#       array.insert(index + 1, array2[index2])
+#       index2 += 1
+#     else
+#       index += 1
+#     end
+#     # p array.length
+#   end
+#   break
+# end
+# p array
+
+# 100 coolio array
+
+def numbers(array)
+  index = 0
+  index2 = -1
+  coolio = true
+  while index < array.length / 2
+    if array[index] + array[index2] != 100
+      coolio = false
     end
-    # p array.length
+    index += 1
+    index2 -= 1
   end
-  break
+  return coolio
 end
-p array
+
+
+p numbers([1, 2, 3, 97, 98, 99])
+p numbers([90, 20, 70, 100, 30, 80, 10])
