@@ -99,20 +99,51 @@
 
 # 100 coolio array
 
-def numbers(array)
+# def numbers(array)
+#   index = 0
+#   index2 = -1
+#   coolio = true
+#   while index < array.length / 2
+#     if array[index] + array[index2] != 100
+#       coolio = false
+#     end
+#     index += 1
+#     index2 -= 1
+#   end
+#   return coolio
+# end
+
+
+# p numbers([1, 2, 3, 97, 98, 99])
+# p numbers([90, 20, 70, 100, 30, 80, 10])
+
+# longest common prefix
+def longest_prefix(array)
   index = 0
-  index2 = -1
-  coolio = true
-  while index < array.length / 2
-    if array[index] + array[index2] != 100
-      coolio = false
+  index2 = 1
+  letter = 0
+  prefix = ""
+  is_done = false
+  while is_done == false
+    while is_done == false
+      if array[index][letter] == array[index2][letter]
+        index2 += 1
+      else
+        return prefix
+        is_done = true
+      end
+      if index2 == array.length
+        prefix += array[index][letter]
+        letter += 1
+        index2 = 1
+      end
+      if letter == array[index].length
+        is_done = true
+        return prefix
+      end
     end
-    index += 1
-    index2 -= 1
   end
-  return coolio
 end
 
-
-p numbers([1, 2, 3, 97, 98, 99])
-p numbers([90, 20, 70, 100, 30, 80, 10])
+p longest_prefix(["flower","flow","flight"])
+p longest_prefix(["dog","racecar","car"])
