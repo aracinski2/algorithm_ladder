@@ -24,17 +24,25 @@
 # p most_frequent_letter("peter piper picked a peck of pickled peppers")
 
 # count votes
-def vote_count(array)
-  votes = Hash.new
-  array.each do |vote|
-    # p votes[vote]
-    if votes.has_key?(vote)
-      votes[vote] += 1
-    else 
-      votes[vote] = 1
-    end
-  end
-  return votes
-end
+# def vote_count(array)
+#   votes = Hash.new
+#   array.each do |vote|
+#     # p votes[vote]
+#     if votes.has_key?(vote)
+#       votes[vote] += 1
+#     else 
+#       votes[vote] = 1
+#     end
+#   end
+#   return votes
+# end
 
-p vote_count(["Dewey", "Truman", "Dewey", "Dewey", "Truman", "Truman", "Dewey", "Truman", "Truman", "Dewey", "Dewey"])
+# p vote_count(["Dewey", "Truman", "Dewey", "Dewey", "Truman", "Truman", "Dewey", "Truman", "Truman", "Dewey", "Dewey"])
+
+# order the whole menu
+menu_items = {"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2}
+order_total = 0
+menu_items.each do |item|
+  order_total += item[1]
+end
+p order_total
