@@ -42,7 +42,7 @@
 # order the whole menu
 menu_items = {"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2}
 order_total = 0
-menu_items.each do |item|
-  order_total += item[1]
+menu_items.each do |k,v|
+  order_total += v
 end
 p order_total
